@@ -114,8 +114,6 @@ th {
     border-radius: 4px;
 }
 
-
-/* Favorites button style */
 .tableControls {
     display: flex;
     justify-content: center;
@@ -133,6 +131,7 @@ th {
     border-radius: 5px;
 }
 
+
 #favoritesButton:hover {
     background-color: #ddd;
 }
@@ -142,7 +141,6 @@ th {
     color: white;
 }
 
-/* Heart icon styles */
 .fa-heart {
     cursor: pointer;
     font-size: 24px;
