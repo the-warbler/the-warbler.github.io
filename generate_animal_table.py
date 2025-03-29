@@ -32,8 +32,8 @@ def generate_animal_table(csv_file):
     for row in data:
         common_name = row['Primary common name'].strip()
         img_common_name = common_name.replace(" ", "")
-        image_name = f"{img_common_name}.png"  # Construct the image name
-        image_tag = f'<img src="assets/img/animals/{image_name}" alt="{common_name}" width="100" />'  # Create the image tag
+        image_name = f"{img_common_name}.png" 
+        image_tag = f'<img src="assets/img/animals/{image_name}" alt="{common_name}" width="100" />'
 
         html_table += "\t<tr>\n"
         html_table += f"\t\t<td>{common_name}</td>\n"
@@ -44,7 +44,7 @@ def generate_animal_table(csv_file):
         html_table += f"\t\t<td>{row['Federal protection']}</td>\n"
         html_table += f"\t\t<td>{row['State protection']}</td>\n"
         html_table += f"\t\t<td>{image_tag}</td>\n"  # Add the image tag to the table
-        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n'  # Add heart icon
+        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n'
         html_table += "\t</tr>\n"
 
     html_table += """
@@ -54,12 +54,10 @@ def generate_animal_table(csv_file):
 
     return html_table
 
-# Function to create the final HTML file
+
 def create_html_page(csv_file, output_html, css_file):
-    # Generate the animal table HTML
     animal_table = generate_animal_table(csv_file)
 
-    # Create the final HTML structure
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -85,10 +83,8 @@ def create_html_page(csv_file, output_html, css_file):
 </html>
     """
 
-    # Write the HTML content to the output file
     with open(output_html, 'w') as f:
         f.write(html_content)
 
-# Run the script with a CSV file and output HTML file
 if __name__ == "__main__":
     create_html_page('assets/endangered.csv', 'endangered_species.html', 'css/components/table.css')

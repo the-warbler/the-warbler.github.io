@@ -1,12 +1,12 @@
 import csv
 
 def generate_park_table(csv_file):
-    # Reading the CSV file
+    # reads csv
     with open(csv_file, newline='') as f:
         reader = csv.DictReader(f)
         data = list(reader)
 
-    # Generate the HTML for the table with sortable headers
+    # initial html
     html_table = """
     <div class="table-container">
         <div class="tableControls">
@@ -28,7 +28,7 @@ def generate_park_table(csv_file):
                 <tbody>
     """
 
-    # Generate table rows
+    # table rows
     for row in data:
         html_table += "\t<tr>\n"
         html_table += f"\t\t<td>{row['NAME311']}</td>\n"
@@ -37,7 +37,7 @@ def generate_park_table(csv_file):
         html_table += f"\t\t<td>{row['TYPECATEGORY']}</td>\n"
         html_table += f"\t\t<td>{row['ACRES']}</td>\n"
         html_table += f'\t\t<td><a href="{row["URL"]}" target="_blank">Visit Park</a></td>\n'
-        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n'  # Add heart icon for favorites
+        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n'
         html_table += "\t</tr>\n"
 
     html_table += """
@@ -48,12 +48,10 @@ def generate_park_table(csv_file):
 
     return html_table
 
-# Function to create the final HTML file
+
 def create_html_page(csv_file, output_html, css_file):
-    # Generate the park table HTML
     park_table = generate_park_table(csv_file)
 
-    # Create the final HTML structure
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -78,11 +76,9 @@ def create_html_page(csv_file, output_html, css_file):
     </body>
 </html>
     """
-
-    # Write the HTML content to the output file
     with open(output_html, 'w') as f:
         f.write(html_content)
 
-# Run the script with a CSV file and output HTML file
+
 if __name__ == "__main__":
     create_html_page('assets/parks.csv', 'nyc_parks.html', 'css/components/table.css')

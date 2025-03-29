@@ -1,13 +1,10 @@
 import csv
 
-# Function to generate the HTML table from the CSV data
 def generate_law_table(csv_file):
-    # Reading the CSV file
     with open(csv_file, newline='') as f:
         reader = csv.DictReader(f)
         data = list(reader)
 
-    # Generate the HTML for the table with sortable headers
     html_table = """
     <div class="table-container">
         <div class="tableControls">
@@ -25,17 +22,13 @@ def generate_law_table(csv_file):
                 </thead>
                 <tbody>
     """
-
-    # Generate table rows
     for row in data:
         html_table += "\t<tr>\n"
         html_table += f"\t\t<td>{row['Article']}</td>\n"
         html_table += f"\t\t<td>{row['Article Name']}</td>\n"
         html_table += f"\t\t<td>{row['Description']}</td>\n"
-        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n'  # Add heart icon
+        html_table += f'\t\t<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>\n' 
         html_table += "\t</tr>\n"
-
-
 
     html_table += """
                 </tbody>
@@ -44,12 +37,10 @@ def generate_law_table(csv_file):
 
     return html_table
 
-# Function to create the final HTML file
+
 def create_html_page(csv_file, output_html, css_file):
-    # Generate the law table HTML
     law_table = generate_law_table(csv_file)
 
-    # Create the final HTML structure
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -76,10 +67,8 @@ def create_html_page(csv_file, output_html, css_file):
 </html>
     """
 
-    # Write the HTML content to the output file
     with open(output_html, 'w') as f:
         f.write(html_content)
 
-# Run the script with a CSV file and output HTML file
 if __name__ == "__main__":
     create_html_page('assets/laws.csv', 'conservation_laws.html', 'css/components/table.css')

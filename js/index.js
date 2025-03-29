@@ -39,7 +39,7 @@ const quotes = [
 document.getElementById('randomQuote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
 
 const facts = [
-    "Forests cover about 31% of the Earth’s land area, but they’re disappearing at an alarming rate of around 10 million hectares each year.", 
+    "Forests cover about 31% of the Earth’s land area, but they're disappearing at an alarming rate of around 10 million hectares each year.", 
     "Renewable energy sources, like solar and wind, accounted for nearly 30% of global electricity generation in 2021.",
     "The Great Barrier Reef has lost about half of its coral cover since the 1970s, largely due to rising sea temperatures.",
     "One in five plant and animal species faces extinction due to climate change, habitat loss, and invasive species, with amphibians being particularly vulnerable."
