@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NYC Parks Directory</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/components/table.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/components/navbar.js"></script>
+    </head>
+    <body>
+        <div class="center">
+            <h1>NYC Parks Directory</h1>
+            <p>This table lists various parks in NYC along with their details and links.</p>
+                
+    <div class="table-container">
+        <div class="tableControls">
+            <input type="text" id="searchInput" onkeyup="filterTable('parkTable')" placeholder="Search for parks..." class="searchBar">
+            <button id="favoritesButton" onclick="toggleFavorites('parkTable')">Show Favorites</button>
+        </div>
+        <table id="parkTable" class="tableCenter">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('parkTable', 0)">Park Name</th>
+                        <th onclick="sortTable('parkTable', 1)">Location</th>
+                        <th onclick="sortTable('parkTable', 2)">Borough</th>
+                        <th onclick="sortTable('parkTable', 3)">Type/Category</th>
+                        <th onclick="sortTable('parkTable', 4)">Acreage</th>
+                        <th>Park URL</th>
+                        <th><i class="fa-regular fa-heart"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+    	<tr>
+		<td>Abraham Lincoln Playground</td>
+		<td>5 Ave. and E. 135 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>0.991</td>
+		<td><a href="http://www.nycgovparks.org/parks/M193/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Alfred E. Smith Playground</td>
+		<td>Catherine Slip, Madison St. and South St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>1.75</td>
+		<td><a href="http://www.nycgovparks.org/parks/M194/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Alice Austen Park</td>
+		<td>Edgewater St., Hylan Blvd., Abbott St.</td>
+		<td>R</td>
+		<td>Historic House Park</td>
+		<td>15.524</td>
+		<td><a href="http://www.nycgovparks.org/parks/R117/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Alley Pond Park</td>
+		<td>Little Neck Bay to Springfield Blvd, Union Tpke</td>
+		<td>Q</td>
+		<td>Flagship Park</td>
+		<td>635.514</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q001/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Aqueduct Walk</td>
+		<td>Dr. MLK Jr. Blvd. bet. W. Tremont Ave. and E. Fordham Rd.</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>8.607</td>
+		<td><a href="http://www.nycgovparks.org/parks/X001A/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Aqueduct Walk</td>
+		<td>Aqueduct Ave. W. bet. W. Fordham Rd. and W. Kingsbridge Rd.</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>4.926</td>
+		<td><a href="http://www.nycgovparks.org/parks/X001/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Archie Spigner Park</td>
+		<td>169 St., Merrick Blvd., Marne Pl. bet. Linden Blvd., Sayres Ave., and 111 Rd.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>10.79</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q051/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Asphalt Green</td>
+		<td>E. 90 St., York Ave., FDR Dr.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>4.35</td>
+		<td><a href="http://www.nycgovparks.org/parks/M286/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Asser Levy Park</td>
+		<td>Boardwalk, Surf Ave., Sea Breeze Ave., Ocean Parkway</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>21.039</td>
+		<td><a href="http://www.nycgovparks.org/parks/B080/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Asser Levy Playground</td>
+		<td>E. 23 St. To E. 25 St., FDR Drive</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>2.436</td>
+		<td><a href="http://www.nycgovparks.org/parks/M164/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Astoria Park</td>
+		<td>19 St. bet. Astoria Park S. and Ditmars Blvd.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>59.956</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q004/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Baisley Pond Park</td>
+		<td>N. Conduit Ave., 116 Ave. bet. 150 St., Suptin Blvd., and Baisley Blvd. S.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>109.609</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q005/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Battery Park City</td>
+		<td>Hudson River, Liberty St. West St, and Pier A</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>26.042</td>
+		<td><a href="http://www.nycgovparks.org/parks/M283/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bayswater Park</td>
+		<td>Dwight Ave., Seagirt Blvd. bet. Beach 38 St. and Bay 32 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>40.16</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q007/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Betsy Head Park</td>
+		<td>Blake Ave., Dumont Ave. bet. Thomas Boyland St. and Bristol St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>10.555</td>
+		<td><a href="http://www.nycgovparks.org/parks/B008/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Big Bush Playground</td>
+		<td>Laurel Hill Blvd. bet. 61 St. and 64 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>2.5</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q205A/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bloomingdale Park</td>
+		<td>Richmond Pkwy., West Shore Expw., Lenevar Ave., Ramona Ave.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>138.1</td>
+		<td><a href="http://www.nycgovparks.org/parks/R106/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Breukelen Ballfields</td>
+		<td>Louisiana Ave., Stanley Ave., Flatlands Ave., Williams Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>16.16</td>
+		<td><a href="http://www.nycgovparks.org/parks/B247/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bronx Park</td>
+		<td>Southern Blvd,Webster,Burke Aves,Bronx Pk E,180 St</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>718.373</td>
+		<td><a href="http://www.nycgovparks.org/parks/X002/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Brooklyn Bridge Park</td>
+		<td>Brooklyn Waterfront From Washington St To Atlantic Ave</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>21.377</td>
+		<td><a href="http://www.nycgovparks.org/parks/B431/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Brookville Park</td>
+		<td>S. Conduit Ave., 149 Ave. bet. 232 St. and 235 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>89.946</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q008/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Brownsville Playground</td>
+		<td>Hegeman Ave., Linden Blvd. bet. Powell St. and Mother Gaston Blvd.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>3.017</td>
+		<td><a href="http://www.nycgovparks.org/parks/B270/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bushwick Playground</td>
+		<td>Flushing Ave. bet.. Beaver St. and Garden St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>1.29</td>
+		<td><a href="http://www.nycgovparks.org/parks/B310/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Callahan-Kelly Playground</td>
+		<td>Fulton St., Truxton St., bet. Eastern Pkwy. and Van Sinderen Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>3.253</td>
+		<td><a href="http://www.nycgovparks.org/parks/B219/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Cambria Playground</td>
+		<td>Francis Lewis Blvd., 121 Ave. bet. 219 St. and 222 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>4.635</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q339/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Canarsie Park</td>
+		<td>Belt Pkwy, Seaview Ave Btw: Paerdegat Basin, E 93 S, E 102 St, Fresh Creek Basin</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>132.2</td>
+		<td><a href="http://www.nycgovparks.org/parks/B018/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Carter G. Woodson Children's Park</td>
+		<td>Christopher Ave. between Sutter Ave. and Belmont Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>0.918</td>
+		<td><a href="http://www.nycgovparks.org/parks/B397/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Central Park</td>
+		<td>5 Av To Central Park W, 59 St To 110 St</td>
+		<td>M</td>
+		<td>Flagship Park</td>
+		<td>840.01</td>
+		<td><a href="http://www.nycgovparks.org/parks/M010/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Claremont Park</td>
+		<td>Clay Ave., Anthony Ave. bet. Mount Eden Pkwy. and E. 170 St</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>38.536</td>
+		<td><a href="http://www.nycgovparks.org/parks/X008/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Clason Point Park</td>
+		<td>Cornell Ave., Soundview Ave., Westchester Creek</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>14.872</td>
+		<td><a href="http://www.nycgovparks.org/parks/X088/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Clove Lakes Park</td>
+		<td>Forest Ave., Victory Blvd., bet. Clove Rd. and Brookside Ave., Royal Oak Rd.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>193.423</td>
+		<td><a href="http://www.nycgovparks.org/parks/R005/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Commodore Barry Park</td>
+		<td>Nassau St., Park Ave., bet. Navy St. and N. Elliot Pl.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>10.391</td>
+		<td><a href="http://www.nycgovparks.org/parks/B021/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>CPL. Thompson Park</td>
+		<td>Broadway, Henderson Ave., Chappell St.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>10.5</td>
+		<td><a href="http://www.nycgovparks.org/parks/R109/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Crocheron Park</td>
+		<td>214 Pl., 214 La., 215 Pl, Cross Island Pkwy. bet. 33 Ave. and 35 Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>45.79</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q012/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Crotona Park</td>
+		<td>Crotona Park North to South, Fulton Av to Southern Blvd and Crotona Park East</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>127.5</td>
+		<td><a href="http://www.nycgovparks.org/parks/X010/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Cunningham Park</td>
+		<td>Horace Harding Expwy, Grand Central Pkwy</td>
+		<td>Q</td>
+		<td>Flagship Park</td>
+		<td>358</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q021/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Damrosch Park</td>
+		<td>Amsterdam Ave. and W. 62 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>2.443</td>
+		<td><a href="http://www.nycgovparks.org/parks/M231/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Detective Keith L Williams Park</td>
+		<td>Liberty Ave. bet. 172 St. and 173 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>7.683</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q121/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>DiGilio Playground</td>
+		<td>Ave. F bet. McDonald Ave. and E. 2 St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>0.826</td>
+		<td><a href="http://www.nycgovparks.org/parks/B316/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Dry Dock Playground</td>
+		<td>Szold Pl., E. 10 St., Ave. D</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>1.5</td>
+		<td><a href="http://www.nycgovparks.org/parks/M270/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Dyckman House Museum</td>
+		<td>Broadway and W. 204 St.</td>
+		<td>M</td>
+		<td>Historic House Park</td>
+		<td>0.545</td>
+		<td><a href="http://www.nycgovparks.org/parks/M026/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Dyker Beach Park</td>
+		<td>86 St., Belt Pkwy. bet. Bay 8 St., 14 Ave., and 7 Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>216.655</td>
+		<td><a href="http://www.nycgovparks.org/parks/B028/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Elmhurst Park</td>
+		<td>Grand Ave., 57 Ave. bet. 74 St. and 80 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>6.219</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q492/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Faber Pool and Park</td>
+		<td>Richmond Ter. To Kill Van Kull, Faber St.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>4.339</td>
+		<td><a href="http://www.nycgovparks.org/parks/R008/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fairview Park</td>
+		<td>Englewood Ave., W. Shore Expwy., Veterans Rd. W.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>42.6</td>
+		<td><a href="http://www.nycgovparks.org/parks/R153/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Ferry Point Park</td>
+		<td>Schley Ave., LI Sound bet. Westchester Creek and Balcom Ave.</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>413.8</td>
+		<td><a href="http://www.nycgovparks.org/parks/X126/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fidler-Wyckoff House Park</td>
+		<td>E. 59 St.,Ditmas Ave., Clarendon Rd., Ralph Ave.</td>
+		<td>B</td>
+		<td>Historic House Park</td>
+		<td>1.13</td>
+		<td><a href="http://www.nycgovparks.org/parks/B376/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Flushing Fields</td>
+		<td>149 St. bet. 25 Ave. and 26 Ave., 29 Ave. and Bayside Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>7.671</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q086/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Flushing Meadows Corona Park</td>
+		<td>Grand Central Pkwy, Van Wyck Exwy</td>
+		<td>Q</td>
+		<td>Flagship Park</td>
+		<td>897.69</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q099/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Forest Park</td>
+		<td>Myrtle Ave, Union Tpke, Park Lane S</td>
+		<td>Q</td>
+		<td>Flagship Park</td>
+		<td>506.86</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q015/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fort Greene Park</td>
+		<td>Myrtle Ave., De Kalb Ave. bet. Washington Park and St. Edward's St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>30.168</td>
+		<td><a href="http://www.nycgovparks.org/parks/B032/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fort Tryon Park</td>
+		<td>Riverside Dr To Broadway, W 192 St To Dyckman St</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>67.213</td>
+		<td><a href="http://www.nycgovparks.org/parks/M029/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fort Washington Park</td>
+		<td>Riverside Dr., Hudson River, W. 155 St. to Dyckman St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>184.143</td>
+		<td><a href="http://www.nycgovparks.org/parks/M028/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Frank Principe Park</td>
+		<td>Maurice Ave., 63 St. bet. 54 Ave. and Borden Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>8.899</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q131/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Franz Sigel Park</td>
+		<td>NYCRR, Walton Ave, E 158 St, Grand Concourse</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>15.99</td>
+		<td><a href="http://www.nycgovparks.org/parks/X047/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Freshkills Park</td>
+		<td>Victory Blvd., Signs Rd., Travis Ave., Arthur Kill Rd.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>953.065</td>
+		<td><a href="http://www.nycgovparks.org/parks/R017/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Friends Field</td>
+		<td>Ave. L, E. 4 St., Mcdonald Ave., Ave. M</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>6.7</td>
+		<td><a href="http://www.nycgovparks.org/parks/B372/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Gen. Douglas MacArthur Park</td>
+		<td>Dongan Hills Ave. and Jefferson St.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>5.165</td>
+		<td><a href="http://www.nycgovparks.org/parks/R067/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Gerard P. Dugan Playground</td>
+		<td>Mill Rd. to Weed Ave. bet. Tysens La. and Isernia Ave.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>3.333</td>
+		<td><a href="http://www.nycgovparks.org/parks/R026/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Glen Oaks Oval</td>
+		<td>74 Ave., 260 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>2.948</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q310/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Hamilton Fish Park</td>
+		<td>E Houston St, Stanton St, Sheriff St, Pitt St</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>4.3</td>
+		<td><a href="http://www.nycgovparks.org/parks/M033/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Harvey Park</td>
+		<td>144 St., Whitestone Exwy. bet. 15 Ave. and 20 Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>9.154</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q089B/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Hendrick I. Lott House</td>
+		<td>E. 35 St. to E. 36 St. between Fillmore Ave. and Ave. S</td>
+		<td>B</td>
+		<td>Historic House Park</td>
+		<td>0.734</td>
+		<td><a href="http://www.nycgovparks.org/parks/B433/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Herbert Von King Park</td>
+		<td>Marcy Ave., Tompkins Ave., bet. Greene Ave. and Lafayette Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>7.819</td>
+		<td><a href="http://www.nycgovparks.org/parks/B088/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Highbridge Park</td>
+		<td>W 155 St and Dyckman St, Edgecombe Av & Amsterdam Av</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>130.1</td>
+		<td><a href="http://www.nycgovparks.org/parks/M037/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Highland Park</td>
+		<td>Highland Blvd, Jamaica Ave, Jackie Robinson Pkwy</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>101.28</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q020/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Highland Park</td>
+		<td>Jamaica Ave. and Highland Blvd. from Highland Pl. to Bulwer Pl.</td>
+		<td>B</td>
+		<td>Flagship Park</td>
+		<td>45.059</td>
+		<td><a href="http://www.nycgovparks.org/parks/B047/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Howard Playground</td>
+		<td>Mother Gaston Blvd. and Glenmore Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>1</td>
+		<td><a href="http://www.nycgovparks.org/parks/B260/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Howard Pool</td>
+		<td>E. New York Ave. between Mother Gaston Blvd. and St. Mark's Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>0.67</td>
+		<td><a href="http://www.nycgovparks.org/parks/B260A/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Inwood Hill Park</td>
+		<td>Dyckman St, Hudson River, Harlem River S</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>196.398</td>
+		<td><a href="http://www.nycgovparks.org/parks/M042/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Isham Park</td>
+		<td>Broadway, Isham St, Inwood Pk</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>20.132</td>
+		<td><a href="http://www.nycgovparks.org/parks/M043/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Jacob Joffe Fields</td>
+		<td>Ave. K between E. 58 St. and E. 59 St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>2.984</td>
+		<td><a href="http://www.nycgovparks.org/parks/B324/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>John Golden Park</td>
+		<td>215 Pl., Cross Island Pkwy. bet. 31 Rd. and 33 Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>17</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q012B/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>John Jay Park</td>
+		<td>FDR Dr., E 76 St. To E 78 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>3.312</td>
+		<td><a href="http://www.nycgovparks.org/parks/M045/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>John V. Lindsay East River Park</td>
+		<td>Montgomery St. To E. 12 St., FDR Drive</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>45.88</td>
+		<td><a href="http://www.nycgovparks.org/parks/M144/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Joyce Kilmer Park</td>
+		<td>Grand Concourse to Walton Av bet. E 161 St and E 164 St</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>6.882</td>
+		<td><a href="http://www.nycgovparks.org/parks/X028/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Judge Moses Weinstein Playground</td>
+		<td>Union Turnpike, Vleigh Pl., 141 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>3.25</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q336/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Juniper Valley Park</td>
+		<td>Juniper Blvd. bet. Lutheran Ave., 71 St. and Dry Harbor Rd.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>55.639</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q102/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Kaiser Park</td>
+		<td>Neptune Ave., Bayview Ave.,W. 24 St. to W. 32 St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>26.257</td>
+		<td><a href="http://www.nycgovparks.org/parks/B129/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Kissena Corridor Park</td>
+		<td>Peck & Underhill Aves, Utopia Pkwy, Horace Harding</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>45.937</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q300A/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Kissena Corridor Park</td>
+		<td>Lawrence St,N Hempstead Tpk,Elder Ave,Kissena Blvd</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>100.873</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q300/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Kissena Park</td>
+		<td>Underhill, Oak, Rose, Booth Memorial Aves, Kissena Blvd, Fresh Meadow Ln</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>237.147</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q024/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>LaTourette Park & Golf Course</td>
+		<td>Forest Hill & London Rds, Rockland Ave</td>
+		<td>R</td>
+		<td>Flagship Park</td>
+		<td>760.79</td>
+		<td><a href="http://www.nycgovparks.org/parks/R013/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Lewis H Latimer House</td>
+		<td>137th St. and Leavitt St.</td>
+		<td>Q</td>
+		<td>Historic House Park</td>
+		<td>0.319</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q497/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Lincoln Terrace / Arthur S. Somers Park</td>
+		<td>Eastern Pkwy., E. New York Ave. bet. Rochester Ave. and Portal St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>17.14</td>
+		<td><a href="http://www.nycgovparks.org/parks/B054/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Lindower Park</td>
+		<td>Strickland Ave. between Mill Ave. and E. 60 Pl.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>6.7</td>
+		<td><a href="http://www.nycgovparks.org/parks/B329/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Little Bay Park</td>
+		<td>Cross Island Pkwy. bet. Utopia Pkwy. and Totten Ave.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>55.22</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q010A/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Loreto Playground</td>
+		<td>Morris Park Ave. bet. Haight Ave. and Tomlinson Ave.</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>2.181</td>
+		<td><a href="http://www.nycgovparks.org/parks/X163/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Lost Battalion Hall Recreation Center</td>
+		<td>Queens Blvd. bet. 62 Ave. and 62 Rd.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>2.412</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q401/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Macombs Dam Park</td>
+		<td>River Ave. to the Harlem River bet. E. 157 St. , W. 161 St. and E. 164 St.</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>44.174</td>
+		<td><a href="http://www.nycgovparks.org/parks/X030/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Mafera Park</td>
+		<td>65 Pl. bet. Shaler Ave. and the rail yards</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>5.4</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q305/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Manhattan Beach Park</td>
+		<td>Oriental Blvd. between Ocean Ave. and Mackenzie St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>42.941</td>
+		<td><a href="http://www.nycgovparks.org/parks/B251/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Marcus Garvey Park</td>
+		<td>Madison Ave, E. 120 St. to E. 124 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>20.165</td>
+		<td><a href="http://www.nycgovparks.org/parks/M058/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Marcy Playground</td>
+		<td>Myrtle Ave. bet. Nostrand Ave. and Marcy Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>3.201</td>
+		<td><a href="http://www.nycgovparks.org/parks/B217/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Marine Park</td>
+		<td>Flatbush, Gerritsen & Fillmore Aves, Jamaica Bay</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>800</td>
+		<td><a href="http://www.nycgovparks.org/parks/B057/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>McCarren Park</td>
+		<td>Nassau Ave, Bayard, Leonard & N 12 Sts</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>36.493</td>
+		<td><a href="http://www.nycgovparks.org/parks/B058/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Merchant's House Museum</td>
+		<td>E. 4 St. bet. Bowery and Lafayette St.</td>
+		<td>M</td>
+		<td>Historic House Park</td>
+		<td>0.072</td>
+		<td><a href="http://www.nycgovparks.org/parks/M318/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Montbellier Park</td>
+		<td>Springfield Blvd., Sloan St. bet. 139 Ave. and Eastgate Plaza</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>4.427</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q396/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Morningside Park</td>
+		<td>W 110 St To W 123 St, Manhattan Av To Morningside Av</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>29.888</td>
+		<td><a href="http://www.nycgovparks.org/parks/M056/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Olmsted-Beil House Park</td>
+		<td>Orchard La. S. bet. King St. and Hylan Blvd.</td>
+		<td>R</td>
+		<td>Historic House Park</td>
+		<td>2.76</td>
+		<td><a href="http://www.nycgovparks.org/parks/R162/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Paerdegat Park</td>
+		<td>Albany Ave., E. 40 St. bet. Farragut Rd. and Foster Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>3.56</td>
+		<td><a href="http://www.nycgovparks.org/parks/B218/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Pelham Bay Park</td>
+		<td>Bruckner Blvd, Eastchester, Hutchinson</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>2771.747</td>
+		<td><a href="http://www.nycgovparks.org/parks/X039/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Phil "Scooter" Rizzuto Park</td>
+		<td>Atlantic Ave., 95 Ave. bet. 127 St. and 125 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>4.353</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q129/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Police Officer Edward Byrne Park</td>
+		<td>N. Conduit Ave., 135 Ave. bet. 130 Pl. and 134 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>4.966</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q092/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Prospect Park</td>
+		<td>Prospect Pk W, Flatbush, Parkside, Ocean Aves</td>
+		<td>B</td>
+		<td>Flagship Park</td>
+		<td>526.25</td>
+		<td><a href="http://www.nycgovparks.org/parks/B073/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Queensbridge Park</td>
+		<td>Queensboro Bridge, 41 Rd., 40 Ave. bet. The East River, Vernon Blvd., and 21 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>20.34</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q104/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Randall's Island Park</td>
+		<td>East River and Harlem River</td>
+		<td>M</td>
+		<td>Flagship Park</td>
+		<td>254.3</td>
+		<td><a href="http://www.nycgovparks.org/parks/M104/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Recreational Area</td>
+		<td>W. 145 St., W. 155 St., Hudson River</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>23.093</td>
+		<td><a href="http://www.nycgovparks.org/parks/M140/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Red Hook Recreation Area</td>
+		<td>Halleck St., Bush St. bet. Otsego St. and Court St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>58.503</td>
+		<td><a href="http://www.nycgovparks.org/parks/B126/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Rev. T. Wendell Foster Park and Recreation Center</td>
+		<td>Jerome Av to River Av bet. E 164 St and McClellan St at Cromwell Ave</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>15.049</td>
+		<td><a href="http://www.nycgovparks.org/parks/X034/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Riverside Park</td>
+		<td>Riverside Dr. to Hudson River, W. 72 St.to St Clair Pl.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>253.168</td>
+		<td><a href="http://www.nycgovparks.org/parks/M071/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Riverside Park South</td>
+		<td>12 Ave., Riverside Blvd. bet. W. 59 St. and W. 72 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>71.933</td>
+		<td><a href="http://www.nycgovparks.org/parks/M353/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Rockaway Community Park</td>
+		<td>Conch, Sommerville & Norton Basins, Almeda Ave</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>255.4</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q371/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Roger Morris Park</td>
+		<td>Jumel Terr To Edgecombe Av, W 160 St To W 162 St</td>
+		<td>M</td>
+		<td>Historic House Park</td>
+		<td>1.524</td>
+		<td><a href="http://www.nycgovparks.org/parks/M073/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Roy Wilkins Recreation Center</td>
+		<td>Merrick Blvd. bet. 115 Ave., 116 Ave., and Baisley Blvd.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>56.831</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q448/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Seton Park</td>
+		<td>W 232 St , Independence Av , W 235 St ,</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>11.689</td>
+		<td><a href="http://www.nycgovparks.org/parks/X201/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Sheltering Arms Playground</td>
+		<td>W. 126 St. to W. 129 St., Amsterdam Ave. to Old Broadway</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>1.43</td>
+		<td><a href="http://www.nycgovparks.org/parks/M190/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Shore Park and Parkway</td>
+		<td>4 Ave., Shore Rd., Belt Pkwy., Verrazano Bridge</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>58</td>
+		<td><a href="http://www.nycgovparks.org/parks/B082/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Silver Lake Park</td>
+		<td>Victory Blvd., Clove Rd., Forest Ave.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>205.977</td>
+		<td><a href="http://www.nycgovparks.org/parks/R022/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Snug Harbor Cultural Center</td>
+		<td>Richmond Ter., Tysen St., Kissel Ave., Henderson Ave.</td>
+		<td>R</td>
+		<td>Historic House Park</td>
+		<td>83.3</td>
+		<td><a href="http://www.nycgovparks.org/parks/R116/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Soundview Park</td>
+		<td>Bronx River, Bronx River Ave. bet. Lafayette Ave., Surf Dr.</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>269.415</td>
+		<td><a href="http://www.nycgovparks.org/parks/X118/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Spring Creek Park</td>
+		<td>Shore Pkwy and Seaview Ave., Schenk Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>42.583</td>
+		<td><a href="http://www.nycgovparks.org/parks/B371/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Springfield Park</td>
+		<td>149 Av, Springfield Bl, 145 Rd, 184 St</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>23.543</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q107/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Steeplechase Park</td>
+		<td>Surf Ave. between W. 16 St. and W. 19 St., Public Beach</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>10.01</td>
+		<td><a href="http://www.nycgovparks.org/parks/B369/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>St. John's Park</td>
+		<td>Troy Ave., Bergen St., Prospect Pl., Schenectady Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>9.04</td>
+		<td><a href="http://www.nycgovparks.org/parks/B245/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>St. Mary's Park</td>
+		<td>St Mary's St bet. St Ann's Av and Jackson Av</td>
+		<td>X</td>
+		<td>Community Park</td>
+		<td>35.311</td>
+		<td><a href="http://www.nycgovparks.org/parks/X045/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Sunset Park</td>
+		<td>41 St., 44 St., bet. 5 Ave. and 7 Ave.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>24.498</td>
+		<td><a href="http://www.nycgovparks.org/parks/B087/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Tappen Park</td>
+		<td>Canal St., Water St., Bay St.</td>
+		<td>R</td>
+		<td>Historic House Park</td>
+		<td>1.777</td>
+		<td><a href="http://www.nycgovparks.org/parks/R028/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>The High Line</td>
+		<td>Gansevoort St. To W. 30 St. bet. Washington St. and 11 Ave.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>6.73</td>
+		<td><a href="http://www.nycgovparks.org/parks/M360/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Thomas Greene Playground</td>
+		<td>Nevins St., 3 Ave., bet. De Graw St. and Douglas St.</td>
+		<td>B</td>
+		<td>Community Park</td>
+		<td>2.525</td>
+		<td><a href="http://www.nycgovparks.org/parks/B145/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Thomas Jefferson Park</td>
+		<td>1 Ave., FDR Dr., bet. E. 111 St. and E. 114 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>15.524</td>
+		<td><a href="http://www.nycgovparks.org/parks/M047/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Tudor Park</td>
+		<td>N. Conduit Ave., 133 Ave. bet. 80 St. and 88 St.</td>
+		<td>Q</td>
+		<td>Community Park</td>
+		<td>13.543</td>
+		<td><a href="http://www.nycgovparks.org/parks/Q094/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Union Square Park</td>
+		<td>Broadway To 4 Ave., E 14 St. To E 17 St.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>6.51</td>
+		<td><a href="http://www.nycgovparks.org/parks/M089/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Valentine Varian House</td>
+		<td>Bainbridge Ave. bet. Van Cortlandt Ave.</td>
+		<td>X</td>
+		<td>Historic House Park</td>
+		<td>0.455</td>
+		<td><a href="http://www.nycgovparks.org/parks/X215/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Van Cortlandt Park</td>
+		<td>Broadway, Jerome Ave,City Line,Van Cortlandt Pk S</td>
+		<td>X</td>
+		<td>Flagship Park</td>
+		<td>1146.43</td>
+		<td><a href="http://www.nycgovparks.org/parks/X092/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Wagner Houses Pool</td>
+		<td>E. 124 St. bet. 1 Ave. and 2 Ave.</td>
+		<td>M</td>
+		<td>Community Park</td>
+		<td>1.64</td>
+		<td><a href="http://www.nycgovparks.org/parks/M273/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Wave Hill</td>
+		<td>W 248 St, Independence Av , W 252 St , P</td>
+		<td>X</td>
+		<td>Historic House Park</td>
+		<td>20.867</td>
+		<td><a href="http://www.nycgovparks.org/parks/X209/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Willowbrook Park</td>
+		<td>Richmond Ave., Victory Blvd., Ashworth Ave., and Forest Hill Rd.</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>214.947</td>
+		<td><a href="http://www.nycgovparks.org/parks/R030/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Wolfe's Pond Park</td>
+		<td>Holton Ave., Chisolm St., Luten Ave., Arbutus Ave. and Raritan Bay</td>
+		<td>R</td>
+		<td>Community Park</td>
+		<td>302.693</td>
+		<td><a href="http://www.nycgovparks.org/parks/R031/" target="_blank">Visit Park</a></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+
+                </tbody>
+            </table>
+    </div>
+    
+        </div>
+        <script src="js/components/navbar.js"></script>
+        <script src="js/components/sortTable.js"></script>
+        <script src="js/index.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", restoreFavoriteIcons('parkTable'));</script>
+    </body>
+</html>
+    

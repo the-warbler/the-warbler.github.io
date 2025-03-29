@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Habits</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pages/HabitPage.css">
+    </head>
+    <body>
+        <div class="center" id="habitContainer">
+            <h1>Habits</h1>
+
+            <form id="habitForm" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fas fa-plus"></i>
+                    <input type="text" id="habitTitle" placeholder="Enter Habit" class="habit-input">
+                    <input type="text" id="habitDescription" placeholder="Enter Description" class="habit-input">
+                </div>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+            
+
+            <a href="recycling.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fas fa-recycle"></i>
+                    <div class="HabitText">
+                        <h2>Recycling</h2>
+                        <p>Recycle at least five recyclable items (e.g., plastic bottles, paper, glass) each day.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="bags.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="HabitText">
+                        <h2>Reusable Bags</h2>
+                        <p>Remember to use reusable bags during every shopping trip. Check off each trip where you used them.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="compost.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fa-solid fa-apple-whole"></i>
+                    <div class="HabitText">
+                        <h2>Compost Food Scraps</h2>
+                        <p>Add food scraps to your compost bin each day. Aim for at least one cup of scraps daily.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="trees.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fas fa-tree"></i>
+                    <div class="HabitText">
+                        <h2>Plant one tree</h2>
+                        <p>Commit to planting at least one tree or plant each month and track it.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="walk.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fa-solid fa-bicycle"></i>
+                    <div class="HabitText">
+                        <h2>Walking or Biking </h2>
+                        <p>Walk or bike for at least one short trip (under 1 mile) each day and track it.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="showers.html" class="HabitBox">
+                <div class="HabitContent">
+                    <i class="fa-solid fa-shower"></i>   
+                    <div class="HabitText">
+                        <h2>Take Shorter Showers</h2>
+                        <p>Limit showers to 5-10 minutes daily.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class = "center">
+            <button id="resetCalendars" class="resetBtn">Reset All Calendars</button>
+        </div>
+    
+
+
+        <script src="js/components/navbar.js"></script>
+        <script src="js/pages/habits.js"></script>
+        <script src="js/components/resetCalendars.js"></script>
+    </body>
+</html>

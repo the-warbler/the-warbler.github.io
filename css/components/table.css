@@ -1,0 +1,154 @@
+@media (max-width: 767px) {
+    table,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        margin: 20px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .wideCol {
+        width: none;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .col1 {
+        width: 170px;
+    }
+
+    .col2 {
+        width: 150px;
+    }
+
+    .wideCol {
+        width: 270px;
+    }
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+table {
+    width: 100%;
+    max-width: 1400px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    table-layout: auto;
+}
+
+.tableCenter {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    text-align: center
+    
+    
+}
+
+th {
+    background-color: #148556;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+
+th:hover {
+    background-color: #3fa57b;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: #d6d6d6;
+}
+
+
+th.sort-asc::after {
+    content: " 🔼"; 
+}
+
+th.sort-desc::after {
+    content: " 🔽"; 
+}
+
+th {
+    cursor: pointer;
+}
+
+
+.searchBar {
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Favorites button style */
+.tableControls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#favoritesButton {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#favoritesButton:hover {
+    background-color: #ddd;
+}
+
+#favoritesButton.showing-favorites {
+    background-color: #377cf1;
+    color: white;
+}
+
+/* Heart icon styles */
+.fa-heart {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff6961;
+}
+
+.fa-heart:hover {
+    color: #ff4747;
+}

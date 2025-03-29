@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Endangered Animal Species</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/components/table.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/components/navbar.js"></script>
+    </head>
+    <body>
+        <div class="center">
+            <h1> Animal Species</h1>
+            <p>This table lists various endangered/protected animal species along with their images and protection status.</p>
+                
+    <div class="table-container">
+        <div class="tableControls">
+            <input type="text" id="searchInput" onkeyup="filterTable('animalTable')" placeholder="Search for animals..." class="searchBar">
+            <button id="favoritesButton" onclick="toggleFavorites('animalTable')">Show Favorites</button>
+        </div>
+        <table id="animalTable" class="tableCenter">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('animalTable', 0)">Primary Common Name</th>
+                        <th onclick="sortTable('animalTable', 1)" class = "col2">Scientific Name</th>
+                        <th onclick="sortTable('animalTable', 2)">Class</th>
+                        <th onclick="sortTable('animalTable', 3)">Order</th>
+                        <th onclick="sortTable('animalTable', 4)">Family</th>
+                        <th onclick="sortTable('animalTable', 5)" class = "col1">Federal Protection</th>
+                        <th onclick="sortTable('animalTable', 6)" class = "col1">State Protection</th>
+                        <th class = "wideCol">Image</th>
+                        <th class><i class="fa-regular fa-heart"></i></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+    	<tr>
+		<td>Shortnose Sturgeon</td>
+		<td>Acipenser brevirostrum</td>
+		<td>Actinopterygii (Ray-finned Fishes)</td>
+		<td>Acipenseriformes (Paddlefishes, Spoonfishes, and Sturgeons)</td>
+		<td>Acipenseridae (Sturgeons)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/ShortnoseSturgeon.png" alt="Shortnose Sturgeon" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Atlantic Sturgeon</td>
+		<td>Acipenser oxyrinchus</td>
+		<td>Actinopterygii (Ray-finned Fishes)</td>
+		<td>Acipenseriformes (Paddlefishes, Spoonfishes, and Sturgeons)</td>
+		<td>Acipenseridae (Sturgeons)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/AtlanticSturgeon.png" alt="Atlantic Sturgeon" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Sei Whale</td>
+		<td>Balaenoptera borealis</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Balaenopteridae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/SeiWhale.png" alt="Sei Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Blue Whale</td>
+		<td>Balaenoptera musculus</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Balaenopteridae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/BlueWhale.png" alt="Blue Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Fin Whale</td>
+		<td>Balaenoptera physalus</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Balaenopteridae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/FinWhale.png" alt="Fin Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Red Knot</td>
+		<td>Calidris canutus</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Scolopacidae (Sandpipers, Snipes, and Relatives)</td>
+		<td>Threatened</td>
+		<td>Threatened</td>
+		<td><img src="assets/img/animals/RedKnot.png" alt="Red Knot" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Loggerhead</td>
+		<td>Caretta caretta</td>
+		<td>Chelonia (Turtles)</td>
+		<td>Testudines (Turtles)</td>
+		<td>Cheloniidae</td>
+		<td>Threatened</td>
+		<td>Threatened</td>
+		<td><img src="assets/img/animals/Loggerhead.png" alt="Loggerhead" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Piping Plover</td>
+		<td>Charadrius melodus</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Charadriidae (Lapwings and Plovers)</td>
+		<td>Endangered, Threatened</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/PipingPlover.png" alt="Piping Plover" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Green Turtle</td>
+		<td>Chelonia mydas</td>
+		<td>Chelonia (Turtles)</td>
+		<td>Testudines (Turtles)</td>
+		<td>Cheloniidae</td>
+		<td>Threatened</td>
+		<td>Threatened</td>
+		<td><img src="assets/img/animals/GreenTurtle.png" alt="Green Turtle" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Leatherback</td>
+		<td>Dermochelys coriacea</td>
+		<td>Chelonia (Turtles)</td>
+		<td>Testudines (Turtles)</td>
+		<td>Dermochelyidae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/Leatherback.png" alt="Leatherback" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Northern Right Whale</td>
+		<td>Eubalaena glacialis</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Balaenidae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/NorthernRightWhale.png" alt="Northern Right Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bog Turtle</td>
+		<td>Glyptemys muhlenbergii</td>
+		<td>Chelonia (Turtles)</td>
+		<td>Testudines (Turtles)</td>
+		<td>Emydidae (Box Turtles and Pond Turtles)</td>
+		<td>Threatened</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/BogTurtle.png" alt="Bog Turtle" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Black Rail</td>
+		<td>Laterallus jamaicensis</td>
+		<td>Aves (Birds)</td>
+		<td>Gruiformes (Rails and Cranes)</td>
+		<td>Rallidae (Rails, Gallinnules, and Coots)</td>
+		<td>Threatened</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/BlackRail.png" alt="Black Rail" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Humpback Whale</td>
+		<td>Megaptera novaeangliae</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Balaenopteridae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/HumpbackWhale.png" alt="Humpback Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Northern Long-eared Bat</td>
+		<td>Myotis septentrionalis</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Chiroptera (Bats)</td>
+		<td>Vespertilionidae (Evening Bats and Vesper Bats)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/NorthernLong-earedBat.png" alt="Northern Long-eared Bat" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Indiana Bat</td>
+		<td>Myotis sodalis</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Chiroptera (Bats)</td>
+		<td>Vespertilionidae (Evening Bats and Vesper Bats)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/IndianaBat.png" alt="Indiana Bat" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Chittenango Ovate Amber Snail</td>
+		<td>Novisuccinea chittenangoensis</td>
+		<td>Gastropoda (Gastropods)</td>
+		<td>Stylommatophora</td>
+		<td>Succineidae</td>
+		<td>Threatened</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/ChittenangoOvateAmberSnail.png" alt="Chittenango Ovate Amber Snail" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Sperm Whale</td>
+		<td>Physeter macrocephalus</td>
+		<td>Mammalia (Mammals)</td>
+		<td>Cetacea (Whales, Dolphins, and Porpoises)</td>
+		<td>Physeteridae</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/SpermWhale.png" alt="Sperm Whale" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Karner Blue</td>
+		<td>Plebejus melissa samuelis</td>
+		<td>Insecta (Insects)</td>
+		<td>Lepidoptera (Butterflies, Skippers, and Moths)</td>
+		<td>Lycaenidae (Blues, Coppers, Hairstreaks, Elfins)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/KarnerBlue.png" alt="Karner Blue" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Clubshell</td>
+		<td>Pleurobema clava</td>
+		<td>Bivalvia (Bivalves)</td>
+		<td>Unionoida (Freshwater Mussels)</td>
+		<td>Unionidae (Unionid Mussels)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/Clubshell.png" alt="Clubshell" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Eastern Massasauga</td>
+		<td>Sistrurus catenatus</td>
+		<td>Reptilia (Reptiles)</td>
+		<td>Squamata (Lizards, Snakes and Amphisbaenians)</td>
+		<td>Viperidae (Vipers and Pit Vipers)</td>
+		<td>Threatened</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/EasternMassasauga.png" alt="Eastern Massasauga" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Roseate Tern</td>
+		<td>Sterna dougallii</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Laridae (Terns, Gulls and Relatives)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/RoseateTern.png" alt="Roseate Tern" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Rayed Bean</td>
+		<td>Villosa fabalis</td>
+		<td>Bivalvia (Bivalves)</td>
+		<td>Unionoida (Freshwater Mussels)</td>
+		<td>Unionidae (Unionid Mussels)</td>
+		<td>Endangered</td>
+		<td>Endangered</td>
+		<td><img src="assets/img/animals/RayedBean.png" alt="Rayed Bean" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Great Egret</td>
+		<td>Ardea alba</td>
+		<td>Aves (Birds)</td>
+		<td>Pelecaniformes (Pelicans and Cormorants)</td>
+		<td>Ardeidae (Herons, Bitterns, and Egrets)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/GreatEgret.png" alt="Great Egret" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Ruddy Turnstone</td>
+		<td>Arenaria interpres</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Scolopacidae (Sandpipers, Snipes, and Relatives)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/RuddyTurnstone.png" alt="Ruddy Turnstone" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Long-eared Owl</td>
+		<td>Asio otus</td>
+		<td>Aves (Birds)</td>
+		<td>Strigiformes (Owls)</td>
+		<td>Strigidae (Typical Owls)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/Long-earedOwl.png" alt="Long-eared Owl" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Purple Sandpiper</td>
+		<td>Calidris maritima</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Scolopacidae (Sandpipers, Snipes, and Relatives)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/PurpleSandpiper.png" alt="Purple Sandpiper" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Olive-sided Flycatcher</td>
+		<td>Contopus cooperi</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Tyrannidae</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/Olive-sidedFlycatcher.png" alt="Olive-sided Flycatcher" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Bobolink</td>
+		<td>Dolichonyx oryzivorus</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Icteridae</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/Bobolink.png" alt="Bobolink" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Little Blue Heron</td>
+		<td>Egretta caerulea</td>
+		<td>Aves (Birds)</td>
+		<td>Pelecaniformes (Pelicans and Cormorants)</td>
+		<td>Ardeidae (Herons, Bitterns, and Egrets)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/LittleBlueHeron.png" alt="Little Blue Heron" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Snowy Egret</td>
+		<td>Egretta thula</td>
+		<td>Aves (Birds)</td>
+		<td>Pelecaniformes (Pelicans and Cormorants)</td>
+		<td>Ardeidae (Herons, Bitterns, and Egrets)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/SnowyEgret.png" alt="Snowy Egret" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Rusty Blackbird</td>
+		<td>Euphagus carolinus</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Icteridae</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/RustyBlackbird.png" alt="Rusty Blackbird" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>American Kestrel</td>
+		<td>Falco sparverius</td>
+		<td>Aves (Birds)</td>
+		<td>Falconiformes (Raptors)</td>
+		<td>Falconidae (Caracaras and Falcons)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/AmericanKestrel.png" alt="American Kestrel" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>American Oystercatcher</td>
+		<td>Haematopus palliatus</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Haematopodidae</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/AmericanOystercatcher.png" alt="American Oystercatcher" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Wood Thrush</td>
+		<td>Hylocichla mustelina</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Turdidae (Thrushes)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/WoodThrush.png" alt="Wood Thrush" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Laughing Gull</td>
+		<td>Leucophaeus atricilla</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Laridae (Terns, Gulls and Relatives)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/LaughingGull.png" alt="Laughing Gull" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Whimbrel</td>
+		<td>Numenius phaeopus</td>
+		<td>Aves (Birds)</td>
+		<td>Charadriiformes (Gulls, Plovers, and Shorebirds)</td>
+		<td>Scolopacidae (Sandpipers, Snipes, and Relatives)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/Whimbrel.png" alt="Whimbrel" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Scarlet Tanager</td>
+		<td>Piranga olivacea</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Cardinalidae (Cardinal-Grosbeaks, Cardinals, Grosbeaks, Saltators)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/ScarletTanager.png" alt="Scarlet Tanager" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Glossy Ibis</td>
+		<td>Plegadis falcinellus</td>
+		<td>Aves (Birds)</td>
+		<td>Pelecaniformes (Pelicans and Cormorants)</td>
+		<td>Threskiornithidae (Ibises and Spoonbills)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/GlossyIbis.png" alt="Glossy Ibis" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Prairie Warbler</td>
+		<td>Setophaga discolor</td>
+		<td>Aves (Birds)</td>
+		<td>Passeriformes (Perching Birds)</td>
+		<td>Parulidae (Wood-Warblers)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/PrairieWarbler.png" alt="Prairie Warbler" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>Barn Owl</td>
+		<td>Tyto alba</td>
+		<td>Aves (Birds)</td>
+		<td>Strigiformes (Owls)</td>
+		<td>Tytonidae ( Barn Owls)</td>
+		<td>---</td>
+		<td>Protected Bird</td>
+		<td><img src="assets/img/animals/BarnOwl.png" alt="Barn Owl" width="100" /></td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+
+                </tbody>
+            </table>
+    
+        </div>
+        <script src="js/components/navbar.js"></script>
+        <script src="js/components/sortTable.js"></script>
+        <script src="js/index.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", restoreFavoriteIcons('animalTable'));</script>
+    </body>
+</html>
+    

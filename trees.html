@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits | Trees</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/individualHabitPage.css">
+</head>
+<body>
+    <div class="habit-page" data-habit="Planting Trees">
+        <a href="habits.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        <div class="habit-icon">
+            <i class="fas fa-tree"></i>
+        </div>
+        <div class="habit-info">
+            <h1>Planting trees</h1>
+            <p>Trees improve air quality, provide wildlife habitat, and help combat climate change by absorbing CO2.</p>
+        </div>
+
+        <!-- Commit Button -->
+        <button id="commitButton" class="commit-button">Commit Habit</button>
+
+        <!-- Weekly Calendar (Initially hidden) -->
+        <div class="weekly-calendar" id="trees-calendar">
+            <h2>Track Your Habit</h2>
+            <div class="calendar">
+                <div class="day" data-day="Sunday">S</div>
+                <div class="day" data-day="Monday">M</div>
+                <div class="day" data-day="Tuesday">T</div>
+                <div class="day" data-day="Wednesday">W</div>
+                <div class="day" data-day="Thursday">T</div>
+                <div class="day" data-day="Friday">F</div>
+                <div class="day" data-day="Saturday">S</div>
+            </div>
+        </div>  
+    </div>
+    <script src="js/components/navbar.js"></script>
+    <script src="js/pages/individualHabitPage.js"></script>
+</body>
+</html>

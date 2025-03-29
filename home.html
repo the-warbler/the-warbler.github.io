@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pages/habitPage.css">
+    </head>
+    <body>
+        <div class = "specialCenter" >
+            <h1 class="title">Welcome to EcoGuardian.</h1>
+        </div>
+        
+        <div class = "one">
+            <div class = "row">
+                <div class = "column">
+                    <div class = "row">
+                        <div class="box date-box" id="dateBox">
+                            <div class="month" id="month"></div>
+                            <div class="day" id="day"></div>
+                        </div>
+                        <div class="box">
+                            <h2>Committed Habits</h2>
+                            <div id="committedHabits">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class="box quote-box">
+                            <h2>Random Quote</h2>
+                            <p id="randomQuote"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box daily-fact">
+                            <h2>The Facts</h2>
+                            <p id="randomFact"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "column">
+                    <div class = "row">
+                        <div class="box animal-box" id="randomAnimalBox">
+                            <h2>Random Endangered Animal</h2>
+                            <h3 id="animalName"></h3>
+                            <img id="animalImage" src="#" alt="Random Animal">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box resources-box">
+                            <h2>Resources to Follow</h2>
+                            <ul>
+                                <li><a href="https://guides.nynhp.org/status/?sort=class_name">Rare Species Status List - New York</a></li>
+                                <li><a href="https://www.nysenate.gov/legislation/laws/ENV/-CH43-B">NYS Open Legislation</a></li>
+                                <li><a href= "https://nycopendata.socrata.com/Recreation/Parks-Properties/enfh-gkve/about_data">NYS Park Properties</a></li>
+                                <li><a href="https://www.nationalgeographic.com">National Geographic</a></li>
+                                <li><a href="https://www.wwf.org">World Wildlife Fund</a></li>
+                                <li><a href="https://www.unep.org">United Nations Environment Programme</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/components/navbar.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/components/randomAnimal.js"></script>
+        
+    </body>
+</html>

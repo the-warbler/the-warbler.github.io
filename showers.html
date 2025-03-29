@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits | Showers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/individualHabitPage.css">
+</head>
+<body>
+    <div class="habit-page" data-habit="Showers">
+        <a href="habits.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        <div class="habit-icon">
+            <i class="fa-solid fa-shower"></i>  
+        </div>
+        <div class="habit-info">
+            <h1>Take Shorter Showers</h1>
+            <p>Shortening showers conserves water, lowers energy bills, and helps preserve local water resources.</p>
+        </div>
+
+        <button id="commitButton" class="commit-button">Commit Habit</button>
+
+        <div class="weekly-calendar" id="showers-calendar">
+            <h2>Track Your Habit</h2>
+            <div class="calendar">
+                <div class="day" data-day="Sunday">S</div>
+                <div class="day" data-day="Monday">M</div>
+                <div class="day" data-day="Tuesday">T</div>
+                <div class="day" data-day="Wednesday">W</div>
+                <div class="day" data-day="Thursday">T</div>
+                <div class="day" data-day="Friday">F</div>
+                <div class="day" data-day="Saturday">S</div>
+            </div>
+        </div>      
+    </div>
+    <script src="js/components/navbar.js"></script>
+    <script src="js/pages/individualHabitPage.js"></script>
+</body>
+</html>

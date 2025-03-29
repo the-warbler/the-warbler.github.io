@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Environmental Conservation Laws</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/components/table.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/components/navbar.js"></script>
+        
+    </head>
+    <body>
+        <div class="center">
+            <h1>Environmental Conservation Laws</h1>
+            <p>This table lists environmental conservation laws in New York, sortable by article number and name.</p>
+                
+    <div class="table-container">
+        <div class="tableControls">
+            <input type="text" id="searchInput" onkeyup="filterTable('lawTable', 1)" placeholder="Search for legislation..." class="searchBar">
+            <button id="favoritesButton" onclick="toggleFavorites('lawTable')">Show Favorites</button>
+        </div>
+        <table id="lawTable" class = "tableCenter">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('lawTable', 0)" class = "col2">Article</th>
+                        <th onclick="sortTable('lawTable', 1)">Article Name</th>
+                        <th>Description</th>
+                        <th class><i class="fa-regular fa-heart"></i></th>  
+                    </tr>
+                </thead>
+                <tbody>
+    	<tr>
+		<td>1</td>
+		<td>General Provisions</td>
+		<td>Establishes New York's commitment to conserving and enhancing the environment for the well-being of its residents. Also defines key terms used in New York's environmental laws.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Department of Environmental Conservation; General Functions, Powers, Duties and Jurisdiction</td>
+		<td>Keeps the Department of Environmental Conservation active and describes its leadership and organization. It explains how the department can work with local governments on conservation projects, manage lab testing for environmental issues, and partner with the federal government to acquire land for wildlife management. Outlines the department's key responsibilities, including reviewing state lands, creating a statewide environmental plan, and managing educational resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>State Smart Growth Public Infrastructure Policy Act</td>
+		<td>Promotes sustainable development by ensuring public infrastructure projects consider environmental, economic, and community impacts.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Council of Environmental Advisers</td>
+		<td>Establishes a council to advise on state environmental policies and initiatives.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Environmental Quality Review</td>
+		<td>This act establishes a state policy to foster a positive relationship between people and the environment by preventing damage, improving community resources, and raising awareness of ecological systems.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Lands and Forests</td>
+		<td>Outlines the management of New York's lands and forests, detailing the Department of Environmental Conservation's responsibilities, land acquisition for parks, and stewardship programs</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Fish and Wildlife</td>
+		<td>Regulates the conservation and management of fish and wildlife resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Marine and Coastal Resources</td>
+		<td>Protects and manages New York’s marine and coastal ecosystems.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>New York Ocean and Great Lakes Ecosystem Conservation Act</td>
+		<td>Provides for the conservation and sustainable use of New York’s ocean and Great Lakes resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Water Resources</td>
+		<td>Governs the use and protection of New York's water resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Flood Control</td>
+		<td>Establishes measures for flood prevention and control.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Water Pollution Control</td>
+		<td>Sets standards and regulations to prevent water pollution.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Air Pollution Control</td>
+		<td>Establishes measures to control and prevent air pollution.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>Pollution Control Compacts</td>
+		<td>Facilitates interstate compacts for pollution control.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>Mining of Uranium</td>
+		<td>Regulates uranium mining to ensure safety and environmental protection.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>23</td>
+		<td>Mineral Resources</td>
+		<td>Governs the extraction and management of mineral resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>Freshwater Wetlands</td>
+		<td>Protects freshwater wetlands to preserve their ecological functions.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>Tidal Wetlands</td>
+		<td>Protects tidal wetlands to preserve their ecological functions.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>27</td>
+		<td>Collection, Treatment and Disposal of Refuse and Other Solid Waste</td>
+		<td>Regulates the management of solid waste to prevent environmental contamination.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>Pollution Prevention</td>
+		<td>Promotes practices to reduce pollution at the source.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>29</td>
+		<td>Low-level Radioactive Waste Facilities</td>
+		<td>Governs the management of facilities handling low-level radioactive waste.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>Decommissioning Nuclear Power Plant Discharges Into the Hudson River</td>
+		<td>Regulates the process of decommissioning nuclear power plants and managing discharges into the Hudson River.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>33</td>
+		<td>Pesticides</td>
+		<td>Regulates the use and management of pesticides to ensure environmental and public safety.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>34</td>
+		<td>Coastal Erosion Hazard Areas</td>
+		<td>Manages coastal areas vulnerable to erosion to protect natural and human-made structures.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>35</td>
+		<td>Detergents and Other Household Cleansing Products</td>
+		<td>Sets standards for detergents and household cleaners to minimize environmental impact.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>36</td>
+		<td>Participation In Flood Insurance Programs</td>
+		<td>Facilitates participation in national flood insurance programs to mitigate flood damage.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>37</td>
+		<td>Substances Hazardous or Acutely Hazardous to Public Health, Safety or the Environment</td>
+		<td>Regulates the use and management of hazardous substances to protect public health and the environment.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>38</td>
+		<td>Chlorofluorocarbon Compounds</td>
+		<td>Controls the use of substances that deplete the ozone layer.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>39</td>
+		<td>Sewage System Cleaners and Additives Used In Restricted Geographical Areas</td>
+		<td>Regulates the use of sewage system additives to prevent environmental harm.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>Hazardous Substances Bulk Storage Act</td>
+		<td>Governs the storage of hazardous substances to prevent leaks and spills.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>41</td>
+		<td>Powers and Duties of the Department Applicable Only to the Sixth Park Region</td>
+		<td>Specifies unique powers and responsibilities of the Department of Environmental Conservation in the Sixth Park Region.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>42</td>
+		<td>Historic Hudson-Hoosic Rivers Partnership</td>
+		<td>Promotes the preservation and sustainable use of the Hudson-Hoosic River region.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>43</td>
+		<td>Lake George Park Commission</td>
+		<td>Manages the Lake George Park for conservation and public enjoyment.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>44</td>
+		<td>Hudson River Valley Greenway</td>
+		<td>Establishes a framework for the preservation, enhancement, and development of the Hudson River Valley.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>45</td>
+		<td>State Nature and Historical Preserve Trust</td>
+		<td>Protects and manages areas of natural and historical significance.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>46</td>
+		<td>Albany Pine Bush Preserve Commission</td>
+		<td>Manages the Albany Pine Bush Preserve for conservation and public education.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>47</td>
+		<td>County and Regional Environmental Management Councils</td>
+		<td>Encourages the creation of local councils to address environmental issues.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>48</td>
+		<td>Environmental Justice</td>
+		<td>Addresses the disproportionate environmental impact on disadvantaged communities.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>49</td>
+		<td>Protection of Natural and Man-made Beauty</td>
+		<td>Aims to preserve and enhance the visual quality of the environment.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>51</td>
+		<td>Implementation of Environmental Quality Bond Act of 1972</td>
+		<td>Details the execution of projects funded by the 1972 Bond Act.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>52</td>
+		<td>Implementation of Environmental Quality Bond Act of 1986</td>
+		<td>Details the execution of projects funded by the 1986 Bond Act.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>53</td>
+		<td>Tree Conservation and Urban Forestry</td>
+		<td>Promotes the planting and maintenance of urban forests and street trees.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>54</td>
+		<td>Environmental Protection Act</td>
+		<td>Provides funding and guidelines for various environmental protection projects.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>55</td>
+		<td>Sole Source Aquifer Protection</td>
+		<td>Protects aquifers that are the sole source of drinking water in certain areas.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>56</td>
+		<td>Implementation of the Clean Water/Clean Air Bond Act of 1996</td>
+		<td>Details the execution of projects funded by the 1996 Bond Act.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>57</td>
+		<td>Long Island Pine Barrens Maritime Reserve Act</td>
+		<td>Preserves the Long Island Pine Barrens and its maritime resources.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>58</td>
+		<td>Implementation of the "Clean Water, Clean Air, and Green Jobs Environmental Bond Act of 2022"</td>
+		<td>Details the execution of projects funded by the 2022 Bond Act.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>70</td>
+		<td>Uniform Procedures</td>
+		<td>Establishes consistent procedures for environmental permitting and approvals.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>71</td>
+		<td>Enforcement</td>
+		<td>Outlines the enforcement mechanisms for environmental laws and regulations.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>72</td>
+		<td>Environmental Regulatory Program Fees</td>
+		<td>Specifies the fees associated with environmental regulatory programs.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>73</td>
+		<td>New York State Canal Flood Mitigation Task Force</td>
+		<td>Creates a task force to address flood risks in the state's canal system.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+	<tr>
+		<td>75</td>
+		<td>Climate Change</td>
+		<td>Addresses measures to mitigate and adapt to climate change impacts.</td>
+		<td><i class="fa-regular fa-heart" onclick="toggleFavorite(this)"></i></td>
+	</tr>
+
+                </tbody>
+            </table>
+    
+        </div>
+        <script src="js/components/header.js"></script>
+        <script src="js/components/sortTable.js"></script>
+        <script src="js/index.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", restoreFavoriteIcons('lawTable'));</script>
+    </body>
+</html>
+    
